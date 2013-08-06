@@ -4,6 +4,9 @@
 # except for .gitignore
 !.gitignore
 
+# ingore stupid *~ temporary files
+*~
+
 # Ignore Play! working directory #
 bin
 data
@@ -17,6 +20,7 @@ modules
 precompiled
 project/project
 project/target
+conf/evolutions*
 target
 tmp
 test-result
