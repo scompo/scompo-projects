@@ -24,6 +24,12 @@ create table step (
   constraint pk_step primary key (id))
 ;
 
+create table task (
+  id                        bigint not null,
+  label                     varchar(255),
+  constraint pk_task primary key (id))
+;
+
 
 create table project_step (
   project_id                     bigint not null,
@@ -41,6 +47,8 @@ create sequence material_seq;
 create sequence project_seq;
 
 create sequence step_seq;
+
+create sequence task_seq;
 
 
 
@@ -67,6 +75,8 @@ drop table if exists step;
 
 drop table if exists step_material;
 
+drop table if exists task;
+
 SET REFERENTIAL_INTEGRITY TRUE;
 
 drop sequence if exists material_seq;
@@ -74,4 +84,6 @@ drop sequence if exists material_seq;
 drop sequence if exists project_seq;
 
 drop sequence if exists step_seq;
+
+drop sequence if exists task_seq;
 
